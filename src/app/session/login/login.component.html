@@ -1,13 +1,13 @@
-<div class="container" fxLayout="column">
+<div fxFlex="100%" fxFlexFill>
   <div fxLayoutAlign="center center">
-  <mat-form-field fxLayoutAlign="center center">
-    <input matInput placeholder="Enter your email" [formControl]="email" required>
-    <mat-error *ngIf="email.invalid">{{getErrorMessage()}}</mat-error>
+  <mat-form-field>
+    <input matInput placeholder="Enter your email" [formControl]="emailveryfy" required [(ngModel)]="email" name="email">
+    <mat-error *ngIf="emailveryfy.invalid">{{getErrorMessage()}}</mat-error>
   </mat-form-field>
-  <mat-form-field fxLayoutAlign="center center">
-    <input matInput placeholder="Enter your password" [type]="hide ? 'password' : 'text'">
+  <mat-form-field>
+    <input matInput placeholder="Enter your password" [type]="hide ? 'password' : 'text'" [(ngModel)]="password" name="password">
     <mat-icon matSuffix (click)="hide = !hide">{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
-    <button mat-flat-button color="primary">Primary</button>
+    <button mat-flat-button color="primary" (click)="doLogin()"> Primary</button>
   </mat-form-field>
   </div>
 </div>
