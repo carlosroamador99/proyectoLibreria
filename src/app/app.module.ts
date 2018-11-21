@@ -7,7 +7,7 @@ import { AppComponent } from './app.component';
 import { LoginComponent } from './session/login/login.component';
 import { materialModules } from './materialModules';
 import { HttpClientModule } from '@angular/common/http';
-
+import { FlexLayoutModule } from "@angular/flex-layout";
 
 @NgModule({
   declarations: [
@@ -21,7 +21,8 @@ import { HttpClientModule } from '@angular/common/http';
     FormsModule, 
     ReactiveFormsModule,
     BrowserAnimationsModule,
-    HttpClientModule
+    HttpClientModule,
+    FlexLayoutModule
   ],
   providers: [],
   bootstrap: [AppComponent]

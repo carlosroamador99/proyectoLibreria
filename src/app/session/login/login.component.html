@@ -1,5 +1,7 @@
-<div fxFlex="100%" fxFlexFill>
-  <div fxLayoutAlign="center center">
+<div fxLayout="column" fxLayoutAlign="start center" class="container">
+  <h1>Bienvenido a su librería virtual</h1>
+  <mat-divider></mat-divider>
+  <form fxLayoutAlign="center center" fxLayout="column">
   <mat-form-field>
     <input matInput placeholder="Enter your email" [formControl]="emailveryfy" required [(ngModel)]="email" name="email">
     <mat-error *ngIf="emailveryfy.invalid">{{getErrorMessage()}}</mat-error>
@@ -7,7 +9,7 @@
   <mat-form-field>
     <input matInput placeholder="Enter your password" [type]="hide ? 'password' : 'text'" [(ngModel)]="password" name="password">
     <mat-icon matSuffix (click)="hide = !hide">{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
-    <button mat-flat-button color="primary" (click)="doLogin()"> Primary</button>
   </mat-form-field>
-  </div>
+  <button mat-flat-button color="primary" (click)="doLogin()">Enviar</button>
+</form>
 </div>
